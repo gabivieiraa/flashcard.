@@ -11,6 +11,10 @@ body{
   }
   #container{
       display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 4rem;
+      gap: 3rem;
   }
   .cartao{
       margin: 1rem 1rem;
@@ -22,9 +26,11 @@ body{
   text-align: center;
   background-color:var(--card-front-color);
   height: 100%;
+  transform-style: preserve-3d;
+  transition: transforme 300ms ease-in-out;
   }
   .cartao__conteudo h3{
-      background-color:var(--text-color);
+      color: var(--text-color);
       text-align: left;
       padding: 0.5rem;
       position: absolute;
@@ -32,13 +38,13 @@ body{
       border-radius: 0.6rem;
       font-size: 1vw;
       border: 1px solid var(--text-color);
+      backface-visibility: hidden;
       
   }
   .cartao__conteudo p{
       margin-top: 1rem;
       padding: 2rem;
-      color: var(--text-color);
-      font-weight: 500;
+      margin-top: 4rem;
   
   }
   footer{
